@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- SEO -->
+<meta name="description" content="Souleymane Coulibaly, étudiant en cybersécurité spécialisé en réseaux. Portfolio professionnel : Cisco, VLAN, Linux, pentest, virtualisation. Recherche alternance réseau & sécurité.">
+<meta name="keywords" content="cybersécurité, réseau, alternance, administrateur réseau, pentest, linux, vlan, cisco, étudiant cyber">
+<meta name="author" content="Souleymane Coulibaly">
+
+<!-- Open Graph (LinkedIn, réseaux sociaux) -->
+<meta property="og:title" content="Souleymane Coulibaly | Administrateur Réseau Junior">
+<meta property="og:description" content="Portfolio cybersécurité & réseau – Projets Cisco, Linux, pentest. Recherche alternance 2026.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coulou90.github.io">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Souleymane Coulibaly | Réseau & Cybersécurité</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg-primary:#050a14;
+  --bg-secondary:#0f1729;
+  --bg-card:#1a2332;
+  --border:#1e3a5f;
+  --accent:#00d4ff;
+  --accent-bright:#60efff;
+  --accent-dark:#0088cc;
+  --text:#f0f4f8;
+  --text-muted:#8b98a8;
+  --success:#00ff88;
+  --warning:#ffaa00;
+  --danger:#ff4444;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;
+  background:var(--bg-primary);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+body::before{
+  content:'';
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(0,212,255,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0,255,136,0.05) 0%, transparent 50%);
+  pointer-events:none;
+  z-index:0;
+}
+a{color:var(--accent);text-decoration:none;transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}
+a:hover{color:var(--accent-bright);transform:translateX(3px)}
+.container{max-width:1400px;margin:auto;padding:30px 50px;position:relative;z-index:1}
+
+/* Animated Background Particles */
+.particles{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:0;
+}
+.particle{
+  position:absolute;
+  width:3px;
+  height:3px;
+  background:var(--accent);
+  border-radius:50%;
+  opacity:0.3;
+  animation:float 20s infinite ease-in-out;
+}
+@keyframes float{
+  0%,100%{transform:translate(0,0) scale(1)}
+  25%{transform:translate(100px,-100px) scale(1.5)}
+  50%{transform:translate(-100px,100px) scale(0.8)}
+  75%{transform:translate(50px,50px) scale(1.2)}
+}
+
+/* Header Hero with Advanced Effects */
+header{
+  background:linear-gradient(135deg,#0f1729 0%,#1a2332 50%,#0f1729 100%);
+  border:2px solid var(--border);
+  border-radius:24px;
+  padding:50px;
+  margin-bottom:60px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,212,255,0.1);
+}
+header::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  right:-50%;
+  width:200%;
+  height:200%;
+  background:conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(0,212,255,0.1) 90deg, transparent 180deg);
+  animation:rotate 15s linear infinite;
+}
+header::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:linear-gradient(90deg,transparent,var(--accent),var(--success),transparent);
+  animation:shimmer 3s ease-in-out infinite;
+}
+@keyframes rotate{
+  100%{transform:rotate(360deg)}
+}
+@keyframes shimmer{
+  0%,100%{transform:translateX(-100%)}
+  50%{transform:translateX(100%)}
+}
+.header-content{position:relative;z-index:1}
+.profile-top{display:flex;justify-content:space-between;align-items:start;gap:40px;margin-bottom:40px;flex-wrap:wrap}
+.profile-info h1{
+  color:var(--accent);
+  font-size:52px;
+  font-weight:800;
+  margin-bottom:15px;
+  text-shadow:0 0 40px rgba(0,212,255,0.4);
+  letter-spacing:-1px;
+  animation:glow 3s ease-in-out infinite;
+}
+@keyframes glow{
+  0%,100%{text-shadow:0 0 40px rgba(0,212,255,0.4)}
+  50%{text-shadow:0 0 60px rgba(0,212,255,0.6),0 0 80px rgba(0,212,255,0.3)}
+}
+.profile-info .subtitle{
+  font-size:24px;
+  color:var(--text-muted);
+  margin-bottom:25px;
+  font-weight:300;
+  letter-spacing:0.5px;
+}
+.profile-info .description{
+  color:var(--text);
+  max-width:750px;
+  line-height:1.9;
+  font-size:17px;
+}
+.contact-box{
+  background:linear-gradient(135deg,rgba(15,23,41,0.8),rgba(26,35,50,0.8));
+  border:2px solid var(--border);
+  padding:30px;
+  border-radius:20px;
+  min-width:320px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.3);
+  transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.contact-box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 60px rgba(0,212,255,0.2);
+  border-color:var(--accent);
+}
+.contact-box h3{
+  color:var(--accent);
+  margin-bottom:20px;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin:15px 0;
+  padding:12px;
+  border-radius:12px;
+  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+  background:rgba(0,0,0,0.2);
+}
+.contact-item:hover{
+  background:rgba(0,212,255,0.1);
+  transform:translateX(8px);
+  border-left:3px solid var(--accent);
+}
+.contact-item span{font-size:22px}
+
+/* Advanced Badges */
+.badges{display:flex;flex-wrap:wrap;gap:15px;margin-top:30px}
+.badge{
+  background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(0,255,136,0.1));
+  border:2px solid var(--accent);
+  padding:12px 22px;
+  border-radius:30px;
+  font-size:15px;
+  font-weight:600;
+  transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  position:relative;
+  overflow:hidden;
+}
+.badge::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);
+  transition:0.6s;
+}
+.badge:hover{
+  transform:translateY(-5px) scale(1.05);
+  box-shadow:0 10px 30px rgba(0,212,255,0.4);
+  border-color:var(--accent-bright);
+}
+.badge:hover::before{left:100%}
+.badge-icon{font-size:18px}
+
+/* Navigation with Smooth Transitions */
+.nav-tabs{
+  display:flex;
+  gap:20px;
+  margin-bottom:50px;
+  flex-wrap:wrap;
+  border-bottom:3px solid var(--border);
+  padding-bottom:15px;
+  position:sticky;
+  top:20px;
+  z-index:100;
+  background:rgba(5,10,20,0.95);
+  backdrop-filter:blur(10px);
+  padding:15px;
+  border-radius:15px;
+}
+.nav-tab{
+  padding:15px 30px;
+  background:var(--bg-secondary);
+  border:2px solid var(--border);
+  border-radius:12px;
+  cursor:pointer;
+  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight:600;
+  font-size:16px;
+  position:relative;
+  overflow:hidden;
+}
+.nav-tab::before{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transition:0.3s;
+}
+.nav-tab:hover{
+  background:rgba(0,212,255,0.1);
+  transform:translateY(-3px);
+  border-color:var(--accent);
+}
+.nav-tab.active{
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  color:#000;
+  border-color:var(--accent-bright);
+  box-shadow:0 5px 20px rgba(0,212,255,0.4);
+}
+.nav-tab.active::before{transform:scaleX(1)}
+
+/* Sections with Fade Animations */
+.section{
+  margin-bottom:80px;
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 0.6s cubic-bezier(0.4,0,0.2,1);
+  display:none;
+}
+.section.active{
+  display:block;
+  opacity:1;
+  transform:translateY(0);
+}
+.section-header{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:40px;
+  position:relative;
+}
+.section-header::after{
+  content:'';
+  flex:1;
+  height:2px;
+  background:linear-gradient(90deg,var(--accent),transparent);
+}
+.section-header h2{
+  color:var(--accent);
+  font-size:40px;
+  font-weight:800;
+  border-left:6px solid var(--accent);
+  padding-left:20px;
+  text-shadow:0 0 30px rgba(0,212,255,0.3);
+}
+.section-icon{
+  font-size:40px;
+  filter:drop-shadow(0 0 10px var(--accent));
+}
+
+/* Advanced Grid System */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:30px;
+}
+
+/* Premium Cards with 3D Effects */
+.card{
+  background:linear-gradient(135deg,rgba(26,35,50,0.9),rgba(15,23,41,0.9));
+  border:2px solid var(--border);
+  padding:30px;
+  border-radius:20px;
+  transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+  position:relative;
+  overflow:hidden;
+  backdrop-filter:blur(10px);
+  transform-style:preserve-3d;
+}
+.card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:5px;
+  background:linear-gradient(90deg,var(--accent),var(--success));
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:0.5s;
+}
+.card::after{
+  content:'';
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:0;
+  height:0;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,212,255,0.1),transparent);
+  transform:translate(-50%,-50%);
+  transition:all 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+.card:hover{
+  transform:translateY(-12px) rotateX(2deg);
+  box-shadow:0 25px 60px rgba(0,212,255,0.25);
+  border-color:var(--accent);
+}
+.card:hover::before{transform:scaleX(1)}
+.card:hover::after{width:400px;height:400px}
+.card-header{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:20px;
+  position:relative;
+  z-index:1;
+}
+.card-icon{
+  font-size:32px;
+  background:rgba(0,212,255,0.15);
+  padding:15px;
+  border-radius:15px;
+  transition:all 0.4s;
+  box-shadow:0 5px 20px rgba(0,212,255,0.2);
+}
+.card:hover .card-icon{
+  transform:scale(1.2) rotate(5deg);
+  box-shadow:0 10px 30px rgba(0,212,255,0.4);
+}
+.card h3{
+  color:var(--accent);
+  font-size:22px;
+  font-weight:700;
+  position:relative;
+  z-index:1;
+}
+.card p{
+  color:var(--text-muted);
+  margin-bottom:18px;
+  line-height:1.8;
+  position:relative;
+  z-index:1;
+  font-size:16px;
+}
+.card ul{
+  padding-left:25px;
+  margin-top:15px;
+  position:relative;
+  z-index:1;
+}
+.card li{
+  margin:12px 0;
+  color:#cbd5e1;
+  position:relative;
+  padding-left:15px;
+  line-height:1.7;
+  transition:0.3s;
+}
+.card li::before{
+  content:'▹';
+  position:absolute;
+  left:-10px;
+  color:var(--accent);
+  font-weight:bold;
+  font-size:20px;
+  transition:0.3s;
+}
+.card:hover li::before{
+  transform:translateX(5px);
+  color:var(--accent-bright);
+}
+
+/* Enhanced Skills Progress */
+.skill-item{
+  margin:25px 0;
+  position:relative;
+}
+.skill-header{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+  align-items:center;
+}
+.skill-name{
+  color:var(--text);
+  font-weight:600;
+  font-size:16px;
+}
+.skill-level{
+  color:var(--accent);
+  font-size:15px;
+  font-weight:700;
+  background:rgba(0,212,255,0.1);
+  padding:4px 12px;
+  border-radius:20px;
+}
+.progress-bar{
+  background:rgba(30,58,95,0.5);
+  height:12px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:inset 0 2px 5px rgba(0,0,0,0.3);
+}
+.progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent-bright),var(--success));
+  border-radius:20px;
+  position:relative;
+  transition:width 1.5s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:0 0 20px rgba(0,212,255,0.5);
+}
+.progress-fill::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);
+  animation:shine 2s ease-in-out infinite;
+}
+@keyframes shine{
+  0%{transform:translateX(-100%)}
+  100%{transform:translateX(100%)}
+}
+
+/* Advanced Timeline */
+.timeline{
+  position:relative;
+  padding-left:50px;
+}
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:15px;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:linear-gradient(180deg,var(--accent),var(--success));
+  box-shadow:0 0 10px var(--accent);
+}
+.timeline-item{
+  position:relative;
+  margin-bottom:40px;
+  padding:25px;
+  background:linear-gradient(135deg,rgba(26,35,50,0.8),rgba(15,23,41,0.8));
+  border:2px solid var(--border);
+  border-radius:15px;
+  transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.timeline-item::before{
+  content:'';
+  position:absolute;
+  left:-40px;
+  top:30px;
+  width:18px;
+  height:18px;
+  background:var(--accent);
+  border-radius:50%;
+  border:4px solid var(--bg-primary);
+  box-shadow:0 0 20px var(--accent);
+  transition:0.4s;
+}
+.timeline-item:hover{
+  transform:translateX(10px);
+  box-shadow:0 10px 40px rgba(0,212,255,0.2);
+  border-color:var(--accent);
+}
+.timeline-item:hover::before{
+  transform:scale(1.5);
+  box-shadow:0 0 30px var(--accent-bright);
+}
+.timeline-date{
+  color:var(--accent);
+  font-weight:700;
+  margin-bottom:10px;
+  font-size:16px;
+  display:inline-block;
+  padding:5px 15px;
+  background:rgba(0,212,255,0.1);
+  border-radius:20px;
+}
+.timeline-title{
+  color:var(--text);
+  font-weight:700;
+  margin-bottom:8px;
+  font-size:20px;
+}
+.timeline-desc{
+  color:var(--text-muted);
+  line-height:1.8;
+  font-size:15px;
+}
+
+/* Enhanced Stats */
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-bottom:50px;
+}
+.stat-box{
+  background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(0,255,136,0.1));
+  border:2px solid var(--border);
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+  position:relative;
+  overflow:hidden;
+}
+.stat-box::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:conic-gradient(from 0deg,transparent,rgba(0,212,255,0.1),transparent);
+  animation:rotate 10s linear infinite;
+}
+.stat-box:hover{
+  transform:scale(1.1) translateY(-10px);
+  border-color:var(--accent);
+  box-shadow:0 20px 50px rgba(0,212,255,0.3);
+}
+.stat-number{
+  font-size:48px;
+  font-weight:900;
+  background:linear-gradient(135deg,var(--accent),var(--success));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:10px;
+  position:relative;
+  z-index:1;
+  text-shadow:0 0 30px rgba(0,212,255,0.5);
+}
+.stat-label{
+  color:var(--text);
+  font-size:15px;
+  font-weight:600;
+  position:relative;
+  z-index:1;
+}
+
+/* Premium Footer */
+footer{
+  text-align:center;
+  padding:50px 30px;
+  margin-top:100px;
+  border-top:2px solid var(--border);
+  color:var(--text-muted);
+  background:linear-gradient(135deg,rgba(15,23,41,0.5),rgba(5,10,20,0.5));
+  border-radius:20px;
+}
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:35px;
+  margin-bottom:25px;
+  flex-wrap:wrap;
+}
+.footer-links a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 24px;
+  border-radius:12px;
+  transition:all 0.3s;
+  background:rgba(0,212,255,0.05);
+  border:2px solid transparent;
+}
+.footer-links a:hover{
+  background:rgba(0,212,255,0.15);
+  border-color:var(--accent);
+  transform:translateY(-5px);
+  box-shadow:0 10px 30px rgba(0,212,255,0.2);
+}
+
+/* Scroll to Top Button */
+.scroll-top{
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  width:60px;
+  height:60px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  opacity:0;
+  transition:all 0.4s;
+  z-index:1000;
+  box-shadow:0 10px 30px rgba(0,212,255,0.4);
+  border:2px solid var(--accent-bright);
+}
+.scroll-top.visible{opacity:1}
+.scroll-top:hover{
+  transform:translateY(-10px) scale(1.1);
+  box-shadow:0 15px 40px rgba(0,212,255,0.6);
+}
+.scroll-top::before{
+  content:'↑';
+  font-size:28px;
+  color:#000;
+  font-weight:900;
+}
+
+/* Loading Animation */
+.loading{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:var(--bg-primary);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  transition:opacity 0.5s;
+}
+.loading.hidden{opacity:0;pointer-events:none}
+.loader{
+  width:80px;
+  height:80px;
+  border:5px solid var(--border);
+  border-top-color:var(--accent);
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{
+  100%{transform:rotate(360deg)}
+}
+
+/* Responsive Design */
+@media (max-width:768px){
+  .container{padding:20px 25px}
+  header{padding:30px 25px}
+  .profile-info h1{font-size:36px}
+  .profile-top{flex-direction:column}
+  .contact-box{min-width:100%}
+  .grid{grid-template-columns:1fr}
+  .nav-tabs{gap:12px;position:relative;top:0}
+  .nav-tab{padding:12px 20px;font-size:14px}
+  .section-header h2{font-size:28px}
+  .stat-number{font-size:36px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div class="loading">
+  <div class="loader"></div>
+</div>
+
+<!-- Animated Particles -->
+<div class="particles">
+  <div class="particle" style="top:10%;left:10%;animation-delay:0s"></div>
+  <div class="particle" style="top:20%;left:80%;animation-delay:2s"></div>
+  <div class="particle" style="top:60%;left:20%;animation-delay:4s"></div>
+  <div class="particle" style="top:80%;left:70%;animation-delay:6s"></div>
+  <div class="particle" style="top:40%;left:50%;animation-delay:8s"></div>
+</div>
+
+<div class="container">
+
+<!-- HEADER -->
+<header>
+  <div class="header-content">
+    <div class="profile-top">
+      <div class="profile-info">
+        <h1>Souleymane Coulibaly</h1>
+        <p class="subtitle">Administrateur Réseau Junior | Cybersécurité & Infrastructures</p>
+        <p class="description">
+         Étudiant en Bachelor 3 Cybersécurité, orienté administration réseau et infrastructures.
+         Je conçois et sécurise des environnements IT à travers des projets concrets : segmentation VLAN, routage, services réseau Linux, firewall et automatisation.
+         Je recherche une alternance afin de renforcer mes compétences terrain en administration réseau et sécurité, et contribuer activement aux projets d’une équipe IT.
+        </p>
+        
+        <div class="badges">
+         <div class="badges">
+            <span class="badge"><span class="badge-icon">🎓</span> Bachelor 3 Cybersécurité</span>
+            <span class="badge"><span class="badge-icon">📅</span> Rythme : 3 sem. entreprise / 1 sem. école</span>
+            <span class="badge"><span class="badge-icon">🗓️</span> Début : Septembre 2026</span>
+            <span class="badge"><span class="badge-icon">⏱️</span> Durée : 12 mois</span>
+            <span class="badge"><span class="badge-icon">📍</span> Zone : Île-de-France & Centre-Val de Loire</span>
+      </div>
+
+        </div>
+      </div>
+        <div class="contact-box">
+  <h3>📬 Coordonnées</h3>
+
+  <div class="contact-item">
+    <span>📧</span>
+    <a href="mailto:souleycouli504@gmail.com">souleycouli504@gmail.com</a>
+  </div>
+
+  <div class="contact-item">
+    <span>🔗</span>
+    <a href="https://www.linkedin.com/in/souleymane-coulibaly-b6335b325" target="_blank">
+      Profil LinkedIn
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <span>💻</span>
+    <a href="https://github.com/coulou90" target="_blank">
+      GitHub – Projets réseau & sécurité
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <span>🗂</span>
+    <a href="https://ytrack.learn.ynov.com/git/csouleym" target="_blank">
+      Gitia – Projets développement
+    </a>
+       </div>
+    </div>
+  </div>
+</div>
+</header>
+
+<!-- NAVIGATION -->
+<div class="nav-tabs">
+  <div class="nav-tab active" onclick="showSection('stats')">📊 Aperçu</div>
+  <div class="nav-tab" onclick="showSection('projects')">🚀 Projets</div>
+  <div class="nav-tab" onclick="showSection('skills')">💡 Compétences</div>
+  <div class="nav-tab" onclick="showSection('parcours')">🎯 Parcours</div>
+  <div class="nav-tab" onclick="showSection('certifications')">📜 Certifications</div>
+</div>
+
+<!-- STATS SECTION -->
+<section class="section active" id="stats">
+  <div class="section-header">
+    <span class="section-icon">📊</span>
+    <h2>Aperçu Professionnel</h2>
+  </div>
+  
+   <div class="stats-grid">
+
+  <div class="stat-box">
+    <div class="stat-number">12+</div>
+    <div class="stat-label">Projets techniques documentés</div>
+  </div>
+
+  <div class="stat-box">
+    <div class="stat-number">6</div>
+    <div class="stat-label">Labs réseau complets</div>
+  </div>
+
+  <div class="stat-box">
+    <div class="stat-number">5</div>
+    <div class="stat-label">Rapports OSINT & Pentest</div>
+  </div>
+
+  <div class="stat-box">
+    <div class="stat-number">B3</div>
+    <div class="stat-label">Niveau d’études actuel</div>
+  </div>
+
+</div>
+
+</div>
+
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🎯</span>
+        <h3>Objectif Professionnel</h3>
+      </div>
+      <p>
+        <p>
+  Mon objectif est d’évoluer vers un poste d’administrateur réseau spécialisé 
+  en sécurité des infrastructures. Je souhaite participer activement à la 
+  gestion, l’optimisation et la sécurisation des réseaux d’entreprise 
+  (VLAN, routage, firewall, supervision).
+  <br><br>
+  Cette alternance représente pour moi une opportunité concrète de monter 
+  en compétences sur des environnements réels, aux côtés d’une équipe 
+  technique expérimentée, tout en apportant une réelle valeur opérationnelle.
+</p>
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">💼</span>
+        <h3>Recherche Alternance</h3>
+      </div>
+      <p>
+        <strong>🗓️ Début :</strong> Septembre 2026<br>
+        <strong>⏱️ Durée :</strong> 12 mois<br>
+        <strong>📅 Rythme :</strong> 3 semaines entreprise / 1 semaine école<br>
+        <strong>📍 Localisation :</strong> Île-de-France & Centre-Val de Loire<br>
+        <strong>💡 Postes visés :</strong> Admin Réseau Jr, Technicien système & réseau, Analyse SOC junior
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">⚡</span>
+        <h3>Points Forts Techniques</h3>
+      </div>
+       <ul>
+  <li>Conception et mise en place d’architectures réseau (VLAN, routage inter-VLAN, ACL)</li>
+  <li>Configuration et administration de switchs & routeurs (Cisco – Packet Tracer)</li>
+  <li>Déploiement et sécurisation de services réseau (DHCP, DNS, SSH, FTP, Apache, mariadb, VPN)</li>
+  <li>Mise en place de pare-feu et règles de filtrage (pfSense, UFW)</li>
+  <li>Analyse réseau et dépannage (Wireshark, ping, traceroute, nmap)</li>
+  <li>Administration Linux (gestion utilisateurs, permissions, services systemd)</li>
+  <li>Réalisation de tests d’intrusion en environnement contrôlé (pentest)</li>
+  <li>Scripts Bash pour automatisation et supervision</li>
+</ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🌟</span>
+        <h3>Soft Skills</h3>
+      </div>
+      <ul>
+        <li>Apprentissage rapide et veille technologique continue</li>
+        <li>Esprit d’analyse et résolution de problèmes</li>
+        <li>Capacité à travailler en équipe</li>
+        <li>Capacité d’adaptation</li>
+        <li>Curiosité et passion pour la cybersécurité</li>
+        <li>Sens des responsabilités et professionnalisme</li>
+        <li>Rigueur dans le travail et respect des procédures techniques</li>
+        <li>Organisation et gestion des priorités</li>
+        <li>Autonomie dans l’apprentissage et montée en compétences rapide</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section class="section" id="projects">
+  <div class="section-header">
+    <span class="section-icon">🚀</span>
+    <h2>Projets & Réalisations Techniques</h2>
+  </div>
+
+  <h3 style="color:var(--accent);margin:50px 0 25px;font-size:28px">🌐 Réseau & Infrastructures</h3>
+<div class="grid">
+
+  <!-- PACKET TRACER -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🌐</span>
+      <h3>Labs Cisco – Packet Tracer</h3>
+    </div>
+    <p><strong>Contexte :</strong> Projets académiques & personnels</p>
+    <ul>
+      <li>Segmentation réseau (VLANs)</li>
+      <li>Routage inter-VLAN (Switch L3)</li>
+      <li>DHCP centralisé par VLAN</li>
+      <li>ACL pour filtrage réseau</li>
+      <li>NAT/PAT accès Internet</li>
+      <li>Tests connectivité (ping, traceroute)</li>
+      <li>Dépannage réseau</li>
+    </ul>
+    <p><strong>Outils :</strong> Cisco Packet Tracer</p>
+    <p><strong>Résultat :</strong> Architectures réseau fonctionnelles documentées</p>
+  </div>
+
+  <!-- LINUX SERVICES -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🐧</span>
+      <h3>Services Réseau Linux</h3>
+    </div>
+    <p><strong>Contexte :</strong> TP Administration Système</p>
+    <ul>
+      <li>Installation Apache, FTP, SSH</li>
+      <li>Gestion utilisateurs & groupes</li>
+      <li>Permissions avancées Linux</li>
+      <li>Supervision services (systemctl)</li>
+      <li>Analyse logs système</li>
+      <li>Sécurisation SSH</li>
+      <li>Automatisation tâches (cron)</li>
+    </ul>
+    <p><strong>OS :</strong> Ubuntu Server, Debian</p>
+    <p><strong>Résultat :</strong> Serveurs sécurisés et opérationnels</p>
+  </div>
+
+</div>
+
+<h3 style="color:var(--accent);margin:50px 0 25px;font-size:28px">🔐 Cybersécurité</h3>
+<div class="grid">
+
+  <!-- PENTEST -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🎯</span>
+      <h3>Pentest – Test d’Intrusion</h3>
+    </div>
+    <p><strong>Contexte :</strong> Projet en laboratoire</p>
+    <ul>
+      <li>Reconnaissance (Nmap, OSINT)</li>
+      <li>Scan vulnérabilités</li>
+      <li>Exploitation failles (Metasploit)</li>
+      <li>Post-exploitation</li>
+      <li>Élévation de privilèges</li>
+      <li>Rédaction rapport professionnel</li>
+      <li>Recommandations sécurité</li>
+    </ul>
+    <p><strong>Environnement :</strong> Kali Linux</p>
+    <p><strong>Résultat :</strong> Vulnérabilités identifiées et corrigées</p>
+  </div>
+
+</div>
+
+<h3 style="color:var(--accent);margin:50px 0 25px;font-size:28px">☁️ Virtualisation</h3>
+<div class="grid">
+
+  <!-- VIRTUALISATION -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">☁️</span>
+      <h3>Virtualisation & Homelab</h3>
+    </div>
+    <p><strong>Contexte :</strong> Lab personnel</p>
+    <ul>
+      <li>Déploiement machines virtuelles</li>
+      <li>Réseaux virtuels isolés</li>
+      <li>Snapshots & sauvegardes</li>
+      <li>Tests pentest en environnement isolé</li>
+      <li>Gestion ressources VM</li>
+      <li>Firewall virtuel</li>
+    </ul>
+    <p><strong>Outils :</strong> Proxmox, VMware</p>
+    <p><strong>Résultat :</strong> Environnement sécurisé pour tests</p>
+  </div>
+
+</div>
+
+<!-- SKILLS SECTION -->
+<section class="section" id="skills">
+  <div class="section-header">
+    <span class="section-icon">💡</span>
+    <h2>Compétences Techniques</h2>
+  </div>
+
+  <div class="grid">
+
+    <!-- RESEAU -->
+    <div class="card">
+      <h3>🌐 Réseaux</h3>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">VLAN & Segmentation réseau</span>
+          <span class="skill-level">Avancé</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:85%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Routage inter-VLAN</span>
+          <span class="skill-level">Avancé</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:80%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">DHCP / DNS</span>
+          <span class="skill-level">Intermédiaire</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:75%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">ACL & filtrage</span>
+          <span class="skill-level">Intermédiaire</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:70%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Analyse réseau (Wireshark)</span>
+          <span class="skill-level">Intermédiaire</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:70%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SYSTEME -->
+    <div class="card">
+      <h3>🐧 Systèmes</h3>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Linux (Ubuntu / Debian)</span>
+          <span class="skill-level">Avancé</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:85%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Gestion utilisateurs & permissions</span>
+          <span class="skill-level">Avancé</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:80%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Services (Apache, SSH, FTP)</span>
+          <span class="skill-level">Intermédiaire</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:75%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Windows Server (bases)</span>
+          <span class="skill-level">Débutant+</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:55%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECURITE -->
+    <div class="card">
+      <h3>🔐 Sécurité</h3>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Pare-feu (pfSense, UFW)</span>
+          <span class="skill-level">Intermédiaire</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:70%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Pentest (lab)</span>
+          <span class="skill-level">Intermédiaire</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:65%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">OSINT</span>
+          <span class="skill-level">Intermédiaire</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:70%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Durcissement système</span>
+          <span class="skill-level">Débutant+</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:60%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTING -->
+    <div class="card">
+      <h3>⚙️ Scripting & Outils</h3>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Bash</span>
+          <span class="skill-level">Avancé</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:85%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Git / GitHub</span>
+          <span class="skill-level">Intermédiaire</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:70%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Virtualisation (Proxmox)</span>
+          <span class="skill-level">Intermédiaire</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:70%"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS SECTION -->
+<section class="section" id="certifications">
+  <div class="section-header">
+    <span class="section-icon">📜</span>
+    <h2>Certifications & Formations</h2>
+  </div>
+
+  <!-- FORMATION -->
+  <h3 style="color:var(--accent);margin-bottom:25px;font-size:28px">🎓 Formation actuelle</h3>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🎯</span>
+        <h3>Bachelor Cybersécurité (B3)</h3>
+      </div>
+      <p><strong>Période :</strong> 2024 – 2027</p>
+      <p><strong>Spécialisation :</strong> Réseaux & Sécurité des Infrastructures</p>
+
+      <p style="margin-top:12px;color:var(--text-muted);line-height:1.8">
+        Formation orientée pratique couvrant l’administration réseau, la cybersécurité,
+        les systèmes Linux/Windows et la virtualisation.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">📚</span>
+        <h3>Modules clés</h3>
+      </div>
+      <ul>
+        <li>Architecture réseau & TCP/IP</li>
+        <li>VLAN, routage, ACL</li>
+        <li>Administration Linux & services réseau</li>
+        <li>Sécurité offensive & défensive</li>
+        <li>Virtualisation & homelab</li>
+        <li>OSINT & investigation</li>
+        <li>Automatisation Bash</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <h3 style="color:var(--accent);margin:50px 0 25px;font-size:28px">🎯 Certifications visées</h3>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🏆</span>
+        <h3>CompTIA Network+</h3>
+      </div>
+      <p><strong>Objectif :</strong> 2026</p>
+      <p class="text-muted">
+        Validation des compétences réseau : adressage IP, routage,
+        dépannage, infrastructures LAN/WAN.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🛡️</span>
+        <h3>CompTIA Security+</h3>
+      </div>
+      <p><strong>Objectif :</strong> 2026</p>
+      <p class="text-muted">
+        Sécurité réseau, gestion des risques, cryptographie,
+        défense contre les attaques.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🌐</span>
+        <h3>Cisco CCNA</h3>
+      </div>
+      <p><strong>Objectif :</strong> 2027</p>
+      <p class="text-muted">
+        Administration réseau Cisco : switching, routing,
+        WLAN et sécurité.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- AUTOFORMATION -->
+  <h3 style="color:var(--accent);margin:50px 0 25px;font-size:28px">📖 Auto-formation continue</h3>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">💻</span>
+        <h3>Plateformes</h3>
+      </div>
+      <ul>
+        <li>TryHackMe</li>
+        <li>Hack The Box</li>
+        <li>Root-Me</li>
+        <li>Documentation Cisco</li>
+        <li>Docs Linux officielles</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🔎</span>
+        <h3>Veille cybersécurité</h3>
+      </div>
+      <ul>
+        <li>CERT-FR & CVE</li>
+        <li>The Hacker News</li>
+        <li>Blogs sécurité</li>
+        <li>Conférences (replays)</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PARCOURS SECTION -->
+<section class="section" id="parcours">
+  <div class="section-header">
+    <span class="section-icon">🎯</span>
+    <h2>Parcours Académique & Expériences</h2>
+  </div>
+
+  <!-- FORMATION -->
+  <h3 style="color:var(--accent);margin-bottom:30px;font-size:28px">📚 Formation</h3>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024 – 2027</div>
+      <div class="timeline-title">Bachelor Cybersécurité (B3)</div>
+      <div class="timeline-desc">
+        Formation orientée réseaux & sécurité.
+        <br><br>
+        <strong>Compétences développées :</strong>
+        <ul>
+          <li>Architecture réseau (VLAN, routage inter-VLAN)</li>
+          <li>Administration Linux & services réseau</li>
+          <li>Pentest & audit de sécurité</li>
+          <li>OSINT & investigation numérique</li>
+          <li>Virtualisation & homelab</li>
+          <li>Automatisation Bash</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2022 – 2024</div>
+      <div class="timeline-title">Formation Informatique & Réseaux</div>
+      <div class="timeline-desc">
+        Bases solides en informatique :
+        <ul>
+          <li>Réseaux TCP/IP</li>
+          <li>Linux & Windows</li>
+          <li>Développement web (HTML/CSS/PHP)</li>
+          <li>Initiation cybersécurité</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EXPERIENCES PROJETS -->
+  <h3 style="color:var(--accent);margin:60px 0 30px;font-size:28px">🚀 Projets majeurs</h3>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">2025</div>
+      <div class="timeline-title">Infrastructure Réseau – Projet académique</div>
+      <div class="timeline-desc">
+        Conception d’une architecture réseau complète :
+        <ul>
+          <li>Segmentation en VLAN</li>
+          <li>Routage inter-VLAN</li>
+          <li>DHCP centralisé</li>
+          <li>ACL & filtrage</li>
+          <li>Tests de connectivité</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024</div>
+      <div class="timeline-title">Pentest & Audit Sécurité</div>
+      <div class="timeline-desc">
+        Test d’intrusion en environnement contrôlé :
+        <ul>
+          <li>Scan vulnérabilités (Nmap)</li>
+          <li>Exploitation failles</li>
+          <li>Post-exploitation</li>
+          <li>Rapport professionnel</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024</div>
+      <div class="timeline-title">Administration Linux</div>
+      <div class="timeline-desc">
+        Mise en place de services réseau :
+        <ul>
+          <li>Apache, FTP, SSH</li>
+          <li>Gestion utilisateurs & permissions</li>
+          <li>Analyse logs</li>
+          <li>Sécurisation serveurs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024 – 2025</div>
+      <div class="timeline-title">Homelab & Virtualisation</div>
+      <div class="timeline-desc">
+        Environnement personnel de tests :
+        <ul>
+          <li>Machines virtuelles</li>
+          <li>Réseaux isolés</li>
+          <li>Tests pentest sécurisés</li>
+          <li>Sauvegardes & snapshots</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INFOS COMPLEMENTAIRES -->
+  <h3 style="color:var(--accent);margin:60px 0 30px;font-size:28px">ℹ️ Informations complémentaires</h3>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🌍 Langues</h3>
+      <ul>
+        <li>Français – Langue maternelle</li>
+        <li>Anglais technique – Bon niveau</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🚗 Mobilité</h3>
+      <ul>
+        <li>Île-de-France & Centre-Val de Loire</li>
+        <li>Transports en commun</li>
+        <li>Permis en cours</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📄 Contrat</h3>
+      <ul>
+        <li>Alternance – 12 mois</li>
+        <li>Début : Septembre 2026</li>
+        <li>Rythme : 3 sem entreprise / 1 sem école</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="mailto:souleycouli504@gmail.com">
+      <span>📧</span> souleycouli504@gmail.com
+    </a>
+    <a href="https://www.linkedin.com/in/souleymane-coulibaly-b6335b325" target="_blank">
+      <span>🔗</span> LinkedIn
+    </a>
+    <a href="https://github.com/coulou90" target="_blank">
+      <span>💻</span> GitHub
+    </a>
+    <a href="https://ytrack.learn.ynov.com/git/csouleym" target="_blank">
+      <span>🗂️</span> Gitia
+    </a>
+  </div>
+
+  <p style="font-size:18px;font-weight:600;margin-bottom:10px">
+    © 2026 Souleymane Coulibaly — Administrateur Réseau Junior
+  </p>
+
+  <p style="font-size:14px;color:var(--text-muted);margin-top:10px">
+    Recherche alternance Réseau & Sécurité — 12 mois — Septembre 2026
+  </p>
+
+  <p style="font-size:13px;color:var(--text-muted);margin-top:8px">
+    Île-de-France & Centre-Val de Loire • Bachelor Cybersécurité
+  </p>
+
+  <p style="font-size:12px;color:#64748b;margin-top:20px">
+    « La sécurité n'est pas un produit, mais un processus » — Bruce Schneier
+  </p>
+</footer>
+
+</div>
+
+<!-- Scroll to Top Button -->
+<div class="scroll-top" onclick="scrollToTop()"></div>
+
+<script>
+
+// ==========================
+// LOADING SCREEN
+// ==========================
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const loader = document.querySelector('.loading');
+    if (loader) loader.classList.add('hidden');
+  }, 800);
+
+  animateProgressBars();
+});
+
+// ==========================
+// SMOOTH SCROLL
+// ==========================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// ==========================
+// RE-ANIMATE SKILLS
+// ==========================
+document.querySelectorAll('.nav-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    setTimeout(animateProgressBars, 150);
+  });
+});
+
+// ==========================
+// KONAMI EASTER EGG
+// ==========================
+let konamiCode = [];
+const konamiPattern = [
+  'ArrowUp','ArrowUp','ArrowDown','ArrowDown',
+  'ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'
+];
+
+document.addEventListener('keydown', (e) => {
+  konamiCode.push(e.key);
+  konamiCode = konamiCode.slice(-10);
+
+  if (konamiCode.join('') === konamiPattern.join('')) {
+    document.body.style.animation = 'rainbow 2s infinite';
+    setTimeout(() => {
+      document.body.style.animation = '';
+    }, 5000);
+  }
+});
+
+// ==========================
+// RAINBOW ANIMATION
+// ==========================
+const style = document.createElement('style');
+style.textContent = `
+@keyframes rainbow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+`;
+document.head.appendChild(style);
+
+// ==========================
+// SCROLL TO TOP BUTTON
+// ==========================
+window.addEventListener('scroll', () => {
+  const btn = document.querySelector('.scroll-top');
+  if (!btn) return;
+
+  if (window.scrollY > 300) {
+    btn.classList.add('visible');
+  } else {
+    btn.classList.remove('visible');
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// ==========================
+// SKILL ANIMATION
+// ==========================
+function animateProgressBars() {
+  const bars = document.querySelectorAll('.section.active .progress-fill');
+
+  bars.forEach(bar => {
+    const width = bar.getAttribute('style');
+    bar.style.width = '0';
+
+    setTimeout(() => {
+      bar.setAttribute('style', width);
+    }, 200);
+  });
+}
+
+</script>
+
+</body>
+</html>
