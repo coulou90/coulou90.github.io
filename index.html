@@ -996,7 +996,7 @@ footer{
   </div>
 
 </div>
-
+</section>
 <!-- SKILLS SECTION -->
 <section class="section" id="skills">
   <div class="section-header">
@@ -1591,12 +1591,6 @@ function showSection(sectionId) {
   if (target) {
     target.style.display = 'block';
     target.classList.add('active');
-
-    // scroll vers la section
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
   }
 
   // gérer bouton actif
@@ -1604,7 +1598,6 @@ function showSection(sectionId) {
     tab.classList.remove('active');
   });
 
-  // activer le bon bouton
   document.querySelector(
     `.nav-tab[onclick="showSection('${sectionId}')"]`
   ).classList.add('active');
