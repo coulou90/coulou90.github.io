@@ -1578,29 +1578,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
-
-// ==========================
-// SKILL ANIMATION
-// ==========================
-function animateProgressBars() {
-  const bars = document.querySelectorAll('.section.active .progress-fill');
-
-  bars.forEach(bar => {
-    const width = bar.getAttribute('style');
-    bar.style.width = '0';
-
-    setTimeout(() => {
-      bar.setAttribute('style', width);
-    }, 200);
-  });
-}
-
 function showSection(sectionId) {
 
   // cacher toutes les sections
@@ -1614,6 +1591,12 @@ function showSection(sectionId) {
   if (target) {
     target.style.display = 'block';
     target.classList.add('active');
+
+    // scroll vers la section
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   }
 
   // gérer bouton actif
@@ -1621,14 +1604,10 @@ function showSection(sectionId) {
     tab.classList.remove('active');
   });
 
-  // récupérer le bouton cliqué proprement
-  const activeTab = [...document.querySelectorAll('.nav-tab')]
-    .find(tab => tab.getAttribute("onclick").includes(sectionId));
-
-  if (activeTab) activeTab.classList.add('active');
-
-  // remonter en haut
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // activer le bon bouton
+  document.querySelector(
+    `.nav-tab[onclick="showSection('${sectionId}')"]`
+  ).classList.add('active');
 }
 </script>
 </body>
