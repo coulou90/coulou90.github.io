@@ -21,13 +21,15 @@
 Je travaille sur des **labs concrets** et projets techniques pour développer mes compétences en :
 
 🔹 Architecture réseau (VLAN, routage, DHCP, ACL)
+
 🔹 Administration Linux (services réseau, sécurité)
+
 🔹 Cybersécurité (pentest, OSINT, audit)
+
 🔹 Virtualisation (homelab Proxmox)
+
 🔹 Automatisation système (Bash)
 
-markdown
-Copier le code
 
 Je recherche une **alternance en administration réseau & sécurité** pour évoluer sur des environnements professionnels réels.
 
@@ -165,12 +167,14 @@ Je recherche une **alternance en administration réseau & sécurité** pour évo
 ### 🎯 Postes visés
 
 ✔ Administrateur réseau junior
+
 ✔ Technicien systèmes & réseaux
+
 ✔ Analyste SOC junior
+
 ✔ Technicien cybersécurité
 
-yaml
-Copier le code
+
 
 ---
 
@@ -180,17 +184,7 @@ Copier le code
 - [ ] CompTIA Security+
 - [ ] Cisco CCNA
 
----
 
-## 📈 Statistiques GitHub
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=coulou90&show_icons=true&theme=tokyonight)
-
-</div>
-
----
 
 ## 📎 Liens
 
